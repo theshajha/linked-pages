@@ -1,12 +1,39 @@
 import axios from 'axios';
-import * as cheerio from 'cheerio';
+import * as cheerio  from 'cheerio';
+
+const getTotalLinks = ($: cheerio.CheerioAPI) => {
+    return $('a').length;
+};
+
+const getInternalLinks = ($: cheerio.CheerioAPI, baseUrl: string) => {
+    return $('a').filter((_, element) => {
+        const href = $(element).attr('href');
+        return href ? href.startsWith(baseUrl) : false; // Ensure a boolean is returned
+    }).length;
+};
+
+const getCTAs = ($: cheerio.CheerioAPI) => {
+    return $('button, a.cta-button').length;
+};
+
+const getImagesWithoutAlt = ($: cheerio.CheerioAPI) => {
+    return $('img:not([alt])').length;
+};
+
+const getTotalForms = ($: cheerio.CheerioAPI) => {
+    return $('form').length;
+};
+
+const getTotalScripts = ($: cheerio.CheerioAPI) => {
+    return $('script').length;
+};
 
 export const fetchPageContent = async (url: string) => {
     const response = await axios.get(url);
     return response.data;
 };
 
-export const analyzeContent = (html: string) => {
+export const analyzeContent = (html: string, baseUrl: string) => {
     const $ = cheerio.load(html);
     const title = $('title').text();
     const description = $('meta[name="description"]').attr('content');
@@ -24,7 +51,6 @@ export const analyzeContent = (html: string) => {
             alt: $(element).attr('alt'),
         });
     });
-    // Continue with other analyses as needed
 
     return {
         title,
@@ -32,6 +58,13 @@ export const analyzeContent = (html: string) => {
         keywords,
         headings,
         images,
+        totalImages: images.length, // Added total images count
+        totalLinks: getTotalLinks($),
+        internalLinks: getInternalLinks($, baseUrl),
+        CTAs: getCTAs($),
+        imagesWithoutAlt: getImagesWithoutAlt($),
+        totalForms: getTotalForms($),
+        totalScripts: getTotalScripts($),
         // Add more analysis results as needed
     };
 };

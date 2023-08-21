@@ -49,7 +49,7 @@ We welcome contributions from the community. Please refer to the CONTRIBUTING.md
 ### Phase 2: Development
 
 #### Sitemap and Content Reading
-- Implement functions to read the sitemap and content of each page: ❌ Pending
+- Implement functions to read the sitemap and content of each page: ✅ Done
 - Visualize the sitemap in a user-friendly manner: ❌ Pending
 
 #### Detailed Mapping
