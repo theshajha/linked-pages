@@ -1,4 +1,4 @@
-# Website Analysis Tool
+# Website Analysis Tool [WIP]
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -18,18 +18,18 @@ The primary goal of this tool is to help marketers understand how their website 
 
 ## Solutions and Capabilities
 ### 1. Detailed Mapping
-   - **Page Linking:** Understand how pages are interconnected.
-   - **Ranking:** List pages based on how often they are linked.
-   - **Re-Ranking:** Redefine the importance of a page and its desired rank.
-   - **Exclusion:** Lock and exclude pages from the mapping.
+- **Page Linking:** Understand how pages are interconnected.
+- **Ranking:** List pages based on how often they are linked.
+- **Re-Ranking:** Redefine the importance of a page and its desired rank.
+- **Exclusion:** Lock and exclude pages from the mapping.
 
 ### 2. Health Analysis
-   - **Inter-Connectivity:** Measure the strength of links between pages.
-   - **Broken Links:** Identify and fix broken connections.
-   - **SEO Performance:** Analyze SEO metrics for better visibility.
-   - **Loading Speed:** Evaluate the loading speed of pages.
-   - **Accessibility:** Check the accessibility standards.
-   - **Content Quality:** Assess the quality and relevance of content.
+- **Inter-Connectivity:** Measure the strength of links between pages.
+- **Broken Links:** Identify and fix broken connections.
+- **SEO Performance:** Analyze SEO metrics for better visibility.
+- **Loading Speed:** Evaluate the loading speed of pages.
+- **Accessibility:** Check the accessibility standards.
+- **Content Quality:** Assess the quality and relevance of content.
 
 ## Who This is For
 This tool is designed for marketers, SEO professionals, web developers, and anyone interested in understanding and improving their website's performance.
