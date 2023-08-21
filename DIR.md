@@ -1,38 +1,45 @@
 - linked-pages/
-    - components/             # Reusable components
-        - Header.js
-        - Footer.js
-        - Sidebar.js
-        - ...
-    - pages/                  # Main page components
-        - index.js              # Home page
-        - about.js              # About page
-        - ...
-    - modules/                # Different features/modules
-        - mapping/              # Mapping related logic
-            - Mapper.js
+    - src/
+        - components/           # Reusable components
+            - Header.tsx
+            - Footer.tsx
+            - Sidebar.tsx
             - ...
-        - ranking/              # Ranking related logic
-            - Ranker.js
+        - pages/                # Main page components
+            - index.tsx           # Home page
+            - about.tsx           # About page
+            - _app.tsx
+            - _document.tsx
+            - _error.tsx
             - ...
-        - health-analysis/      # Health analysis related logic
-            - Analyzer.js
+        - modules/              # Different features/modules
+            - mapping/            # Mapping related logic
+                - Mapper.ts
+                - SitemapParser.ts  # Sitemap parsing (XML and HTML)
+                - ContentReader.ts  # Content reading and analysis
+                - ...
+            - ranking/            # Ranking related logic
+                - Ranker.ts
+                - ...
+            - health-analysis/    # Health analysis related logic
+                - Analyzer.ts
+                - ...
             - ...
-        - ...
-    - utils/                  # Utility functions
-        - helpers.js
-        - ...
+        - utils/                # Utility functions
+            - helpers.ts
+            - ...
+        - styles/               # CSS or SCSS files
+            - global.css
+            - ...
     - public/                 # Static assets
         - images/
         - ...
-    - tests/                  # Test files
+    - tests/                  # Test files (if outside src)
         - components/
         - modules/
-        - ...
-    - styles/                 # CSS or SCSS files
-        - global.css
         - ...
     - node_modules/           # Dependencies
     - package.json            # Project metadata and dependencies
     - README.md               # Project documentation
+    - DIR.md                  # Directory listing
     - ...
