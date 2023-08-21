@@ -1,7 +1,21 @@
 {
   "name": "linked-pages",
   "version": "0.1.0",
+  "description": "A tool to analyze website sitemaps and content, providing insights into page inter-connectivity, ranking, and health.",
   "private": true,
+  "author": "Shashank Jha <theshajha@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theshajha/linked-pages.git"
+  },
+  "keywords": [
+    "sitemap",
+    "content-analysis",
+    "seo",
+    "web-analytics",
+    "nextjs"
+  ],
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -29,5 +43,12 @@
   "devDependencies": {
     "@types/jsdom": "^21.1.1",
     "@types/xml2js": "^0.4.11"
-  }
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "bugs": {
+    "url": "https://github.com/theshajha/linked-pages/issues"
+  },
+  "homepage": "https://github.com/theshajha/linked-pages#readme"
 }

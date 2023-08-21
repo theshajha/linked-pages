@@ -6,9 +6,11 @@ const Home: React.FC = () => {
     const [result, setResult] = useState<any>(null);
 
     const handleSitemapInput = async () => {
-        const analysis = await analyzeWebsite(sitemapUrl);
+        const response = await fetch(`/api/analyzeSitemap?sitemapUrl=${sitemapUrl}`);
+        const analysis = await response.json();
         setResult(analysis);
     };
+
 
     return (
         <div className="container mx-auto p-8">
