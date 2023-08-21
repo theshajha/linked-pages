@@ -1,17 +1,24 @@
-import { parseStringPromise } from 'xml2js';
-import { JSDOM } from 'jsdom';
+import axios from 'axios';
+import * as xml2js from 'xml2js';
+import * as cheerio from 'cheerio';
 
-export const parseXmlSitemap = async (url: string) => {
-    const response = await fetch(url);
-    const xml = await response.text();
-    const result = await parseStringPromise(xml);
-    return result.urlset.url.map((item: any) => item.loc[0]);
+export const parseXmlSitemap = async (sitemapUrl: string) => {
+    const response = await axios.get(sitemapUrl);
+    const xml = response.data;
+    const parser = new xml2js.Parser();
+    const result = await parser.parseStringPromise(xml);
+    return result.urlset.url.map((url: any) => url.loc[0]);
 };
 
-export const parseHtmlSitemap = async (url: string) => {
-    const response = await fetch(url);
-    const html = await response.text();
-    const dom = new JSDOM(html);
-    const links = dom.window.document.querySelectorAll('a');
-    return Array.from(links).map((link) => link.href);
+export const parseHtmlSitemap = async (sitemapUrl: string) => {
+    const response = await axios.get(sitemapUrl);
+    const $ = cheerio.load(response.data);
+    const links: string[] = [];
+    $('a').each((index, element) => {
+        const href = $(element).attr('href');
+        if (href) {
+            links.push(href);
+        }
+    });
+    return links;
 };
