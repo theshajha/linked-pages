@@ -45,7 +45,7 @@ export const analyzeWebsite = async (sitemapUrl: string) => {
 
     return {
         message: allLinks.length > MAX_URLS_TO_PROCESS
-            ? `Found ${allLinks.length} URLs, but only processed the first ${MAX_URLS_TO_PROCESS}`
+            ? `Found ${allLinks.length} URLs, showing the first ${MAX_URLS_TO_PROCESS}`
             : undefined,
         // sitemap: {
         //     xmlLinks,

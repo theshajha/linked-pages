@@ -6,9 +6,10 @@ const getTotalLinks = ($: cheerio.CheerioAPI) => {
 };
 
 const getInternalLinks = ($: cheerio.CheerioAPI, baseUrl: string) => {
+    const urlObj = new URL(baseUrl);
     return $('a').filter((_, element) => {
         const href = $(element).attr('href');
-        return href ? href.startsWith(baseUrl) : false; // Ensure a boolean is returned
+        return href ? href.startsWith(urlObj.origin) : false; // Ensure a boolean is returned
     }).length;
 };
 
