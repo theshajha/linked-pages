@@ -71,6 +71,7 @@ const Home: React.FC = () => {
                                 <Table.ColumnHeaderCell>L3</Table.ColumnHeaderCell>
                                 <Table.ColumnHeaderCell>Total Images</Table.ColumnHeaderCell>
                                 <Table.ColumnHeaderCell>Total Links</Table.ColumnHeaderCell>
+                                <Table.ColumnHeaderCell>Internal Links</Table.ColumnHeaderCell>
                                 <Table.ColumnHeaderCell>Total Forms</Table.ColumnHeaderCell>
                                 <Table.ColumnHeaderCell>Total Scripts</Table.ColumnHeaderCell>
                                 <Table.ColumnHeaderCell>Total CTAs</Table.ColumnHeaderCell>
@@ -88,6 +89,7 @@ const Home: React.FC = () => {
                                 <Table.Cell>{page.paths.L3}</Table.Cell>
                                 <Table.Cell>{page.content.totalImages}</Table.Cell>
                                 <Table.Cell>{page.content.totalLinks}</Table.Cell>
+                                <Table.Cell>{page.content.internalLinks}</Table.Cell>
                                 <Table.Cell>{page.content.totalForms}</Table.Cell>
                                 <Table.Cell>{page.content.totalScripts}</Table.Cell>
                                 <Table.Cell>{page.content.CTAs}</Table.Cell>
