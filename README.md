@@ -66,14 +66,6 @@ We welcome contributions from the community. Please refer to the CONTRIBUTING.md
 - **Unit and Integration Testing:** ❌ Pending
 - **User Acceptance Testing:** ❌ Pending
 
-### Phase 4: Deployment and Maintenance
-- **Deployment:** ❌ Pending
-- **Continuous Updates and Support:** ❌ Pending
-
-### Phase 5: Community Engagement
-- **Community Contributions:** ❌ Pending
-- **Collaboration Opportunities:** ❌ Pending
-
 ### Additional Considerations
 - **Compatibility with Various Sitemaps:** ❌ Pending
 - **User Customization:** ❌ Pending
